@@ -1,3 +1,1 @@
-# Unit 1.2 Variables and Data Types
-
-
+# Unit 1.1 Hello World
