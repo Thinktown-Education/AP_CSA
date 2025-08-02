@@ -30,6 +30,4 @@ System.out.println(38 + 40 + 30 +
                   (38 + 40 + 30) * .15);
 ```
 
-[code example](./test.java)
-
 Do you find something long and repetitive? Notice tax, tip, total are calculated based on `subtotal`. We could simplify the code by creating a variable that stores this value.
