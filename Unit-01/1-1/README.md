@@ -15,9 +15,9 @@ After click finish, you're greeted with the welcome window. Simply close the wel
 
 Next, right click on `src` in the left panel and create a new class. Follow the values changed in red boxes and finish.
 ![alt text](./assets/newclass.png)
-![alt text](./assets/newclass2.png)
+![alt text](image.png)
 
-By now you should see a new java file created with some code. Please copy the exact code below into the new file you just created `FirstProgram.java`.
+By now you should see a new java file created with some code. Please copy the exact code below into the new file you just created `FirstProgram.java`. [Source reference](./src/FirstProgram.java)
 ```java
 public class FirstProgram {
 	public static void main(String[] args) {
