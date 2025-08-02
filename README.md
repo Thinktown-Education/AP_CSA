@@ -4,4 +4,5 @@
 
 <h1 align="center">AP CSA Textbook</h1>
 
-- [Unit 1 Using Objects and Methods](./Unit-01/)
+- [Unit 0 Hello World](./Unit-0/)
+- [Unit 1 Using Objects and Methods](./Unit-1/)

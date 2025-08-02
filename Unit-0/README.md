@@ -1,4 +1,4 @@
-# Unit 1.1 Hello World
+# Unit 0 Hello World
 
 This unit we will download the IDE(Integrated Developement Environment) -- tool to edit java program and run a basic program. Eclipse is the tool we use for this class since it's simple and free to use. Please click [this link](https://www.eclipse.org/downloads/) and download the correct version for your operating system. 
 
