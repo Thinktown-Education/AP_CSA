@@ -4,7 +4,7 @@ This unit we will download the IDE(Integrated Developement Environment) -- tool 
 
 After download, open the installer then select `Eclipse IDE for Java Developers`, then install.\
 <img src="./assets/installer.png" width=600/>\
-<img src="./assets/installer2.png" width=600/>\
+<img src="./assets/installer2.png" width=600/>
 
 Once installed, click Launch and start Eclipse. First window will show you the workspace directory, it's okay to leave it as is, you may also change it to a location you like. Then follow the screenshots below to start a new java project.\ 
 ![alt text](./assets/ide.png)\
