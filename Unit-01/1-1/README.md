@@ -13,7 +13,7 @@ Once installed, click Launch and start Eclipse. First window will show you the w
 After click finish, you're greeted with the welcome window. Simply close the welcome tab here.
 ![alt text](./assets/welcome.png)
 
-Next, right click on `src` in the left panel and create a new class. Follow the values changed in red boxes and finish.
+Next, right click on `src` in the left panel and create a new class. Copy the values changed in red boxes and finish.
 ![alt text](./assets/newclass.png)
 ![alt text](./assets/newclass2.png)
 
@@ -29,3 +29,5 @@ public class FirstProgram {
 
 Finally, click run. You should see "Hello World!" being printed in the console.
 ![alt text](./assets/helloworld.png)
+
+Congratulations! You just completed your first java program.
