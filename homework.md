@@ -9,6 +9,7 @@ def square1(n):
 
 def square2(n):
     # recursion
+    # for loop will be needed to print a single line of *
 ```
 
 Expect output:
@@ -39,6 +40,7 @@ def pyramid1(n):
 
 def pyramid2(n):
     # recursion
+    # for loop will be needed to print a single line of *
 ```
 
 Expected output:
@@ -69,6 +71,7 @@ def reverse1(n):
 
 def reverse2(n):
     # recursion
+    # for loop will be needed to print a single line of *
 ```
 
 Expected output:
