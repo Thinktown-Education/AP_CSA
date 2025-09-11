@@ -32,8 +32,7 @@ System.out.println(38 + 40 + 30 +
 
 Do you find something long and repetitive? Notice tax, tip, total are calculated based on `subtotal`. We could simplify the code by creating a variable that stores this value.
 
-### Declaring variables
----
+## Declaring variables
 Variable declaration: Sets aside memory for storing a value. Variables must be declared before they can be used. 
 
 Syntax for declaring variables
@@ -56,8 +55,7 @@ Computer memory:
 | c    |       |
 | d    |       |
 
-### Assignment
----
+## Assignment
 Variable assignment: Stores a value into a variable
 
 Syntax:
@@ -81,3 +79,27 @@ Computer memory:
 | c    |  false     |
 | d    |  Hello world!     |
 
+## Using variables
+Once a value is assigned to a variable, you can use it in expressions by calling the variable name:
+
+```java
+int x = 5;
+x = 5;
+System.out.println("Value of x is " + x); // Value of x is 5
+x = 1 + 1
+System.out.println(x + 1); // 3
+```
+
+## Variable initialization
+We can combine declaration and assignment into a single line
+
+Syntax:
+```
+type name = value;
+```
+
+Example:
+```java
+int x = 1;
+double y = 1.0 + 2.2;
+```
