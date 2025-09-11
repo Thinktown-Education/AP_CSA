@@ -32,4 +32,49 @@ System.out.println(38 + 40 + 30 +
 
 Do you find something long and repetitive? Notice tax, tip, total are calculated based on `subtotal`. We could simplify the code by creating a variable that stores this value.
 
-## Declaring variables
+### Declaring variables
+Variable declaration: Sets aside memory for storing a value. Variables must be declared before they can be used. 
+
+Syntax for declaring variables
+```
+type name;
+```
+For example
+```java
+int a;
+double b;
+boolean c;
+String d;
+```
+
+Computer memory:
+| name | value |
+|------|-------|
+| a    |       |
+| b    |       |
+| c    |       |
+| d    |       |
+
+### Assignment
+Variable assignment: Stores a value into a variable
+
+Syntax:
+```
+name = type
+```
+
+Example:
+```java
+a = 1;
+b = 2.0;
+c = false;
+d = "Hello world!";
+```
+
+Computer memory:
+| name | value |
+|------|-------|
+| a    |  1    |
+| b    |  2.0  |
+| c    |  false     |
+| d    |  Hello world!     |
