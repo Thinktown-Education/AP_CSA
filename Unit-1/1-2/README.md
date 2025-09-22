@@ -103,3 +103,112 @@ Example:
 int x = 1;
 double y = 1.0 + 2.2;
 ```
+
+Multiple variables\
+We can declare/initialize multiple variables of the same type in a single line.
+
+```java
+int x, y, z;
+
+int x = 1, y = 2, z = 3;
+```
+
+What if we assign incompatiable types to variables?\
+Let's try to assign a double to int variable
+```java
+int x = 1.1; // Error!
+```
+
+But what about the reverse?
+```java
+double x = 3;
+System.out.println(x); // 3.0
+```
+
+## Practice
+Now back to the receipt question, how can we optimize the code with variables?
+```java
+System.out.println("Subtotal:");
+System.out.println(38 + 40 + 30);
+System.out.println("Tax:");
+System.out.println((38 + 40 + 30) * .08);
+System.out.println("Tip:");
+System.out.println((38 + 40 + 30) * .15);
+System.out.println("Total:");
+System.out.println(38 + 40 + 30 +
+                  (38 + 40 + 30) * .08 +
+                  (38 + 40 + 30) * .15);
+```
+
+#### Answer
+```java
+int subtotal = 38 + 40 + 30;
+double tax = subtotal * 0.08;
+double tip = subtotal * 0.15;
+double total = subtotal + tax + tip;
+
+System.out.println("Subtotal: " + subtotal);
+System.out.println("Tax: " + tax);
+System.out.println("Tip: " + tip);
+System.out.println("Total: " + total);
+```
+
+## int
+`int` type in Java represent integers, i.e. numbers with no fractional part such as 3, 0, -76, and 20393
+
+```java
+int a = 1;
+int b = -10;
+int c = 0;
+int d = 10 + 111;
+int e = a + b + c;
+```
+
+## double
+`double` represents non-integer numbers i.e. 1.2, -0.2, 123.456, 1.0, 0.0. Some people call it `float` because there is a floating point between the integer and fractional part. 
+```java
+double a = 1.0;
+double b = -0.2;
+double c = 1.0 + 2.0;
+```
+
+## boolean 
+`boolean` is a logical type that only has 2 possible values: `true` and `false`.
+```java
+double gpa = 3.8;
+boolean isHonorRoll = gpa > 3.5;
+boolean a = false;
+System.out.println(isHonorRoll); // true
+System.out.println(a); // false
+System.out.println(4 <= 5); // true
+```
+
+## final
+The final keyword makes a variable to be constant. Once the variable is assigned a value **once**, it **CANNOT** be assigned with another value afterwards.
+```java
+final double PI = 3.14;
+System.out.println(PI); // 3.14
+PI = 4.2 // ERROR
+```
+
+## Naming convention
+Variable name should describe what the data represents. For example, we should use the variable name `double gpa` to represent student's grade instead of something like `double x`.
+
+The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word.
+
+Variable names **can not include spaces** so uppercasing the first letter of 
+each additional word makes it easier to read the name. Uppercasing the first 
+letter of each additional word is called camel case.
+
+```java
+int numberOfStudents;
+```
+
+Another option is to use underscore symbol _ to separate words, but you cannot have spaces in a variable name. Java is case sensitive so playerScore and playerscore are not the same.
+
+```java
+int number_of_students;
+```
+
+## Keywords
+Java reserves a set of words that cannot be used as variable names. For example: `public` `static` `void` `class` `int` `double` `boolean` `new` `super` `if` `while` `for`

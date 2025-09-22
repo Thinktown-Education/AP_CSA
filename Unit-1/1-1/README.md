@@ -20,3 +20,47 @@ Many programmers make mistakes during programming. A common error is **syntax er
 3. Error message indicates the problem comes from line 8 `at FirstProgram.main(FirstProgram.java:8)`
 
 ![syntax error](./assets/syntax_error.png)
+
+### Practice
+
+Find all mistakes in the code snippet below:
+```
+ pooblic class Errors
+    public static void main(String args){
+        System.out.print("Good morning! ")
+        system.out.print("Good afternoon!);
+        System.Print "And good evening!";
+ }
+ ```
+
+#### Answer
+There are about 10 mistakes, check the answer below:
+
+```java
+ public class Errors {
+    public static void main(String[] args){
+        System.out.print("Good morning! ");
+        System.out.print("Good afternoon!");
+        System.out.print("And good evening!");
+    }
+ }
+ ```
+
+ ## Comment
+ In Java, we can mark some text to be ignored by the compiler. Comments are often used as notes for yourself or your programming partners. There are two types of comments:
+ 1. Single line comment, use `//` to mark anything after it in the same line
+ 2. Multi line comment, use `/*` as the beginning, `*/` as the end. Anything in between would become comments.
+
+```java
+public class Comment {
+    public static void main(String[] args) {
+        System.out.println("Hello world"); // Print Hello world
+        System.out.println("I love computer science");
+        /*
+        Here is the multi line comments
+        It can go over many lines of text
+        blah blah
+        */
+    }
+}
+```
