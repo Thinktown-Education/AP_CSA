@@ -167,6 +167,37 @@ public static int bigger(int a, int b) {
 ```
 (Conditional logic will be covered in the next unit; for now just note only one return executes.)
 
+## 10. Procedural Abstraction
+Procedural abstraction means focusing on *what* a method does, not *how* it does it internally. Once a method is written and tested, you can treat it like a black box: give inputs (arguments) and trust the output (return value or side effect) without re-reading its implementation every time.
+
+Benefits:
+- Hides complexity: `average3(a,b,c)` is clearer than rewriting the formula
+- Encourages reuse across different parts of a program
+- Simplifies reasoning and testing (test the method once, then rely on it)
+- Improves readability of higher-level logic (your `main` reads like a story)
+
+Good abstraction guidelines:
+- Name expresses purpose at the right level (not implementation details)
+- Single responsibility inside each method
+- Return a value instead of printing when the result might be reused
+
+Example (without abstraction):
+```java
+double g = (m1 * m2 * 6.67e-11) / (d * d);
+System.out.println(g);
+```
+Improved with a clear method:
+```java
+double force = gravitationalForce(m1, m2, d);
+System.out.println(force);
+
+public static double gravitationalForce(double m1, double m2, double distance) {
+    final double G = 6.67e-11;
+    return (m1 * m2 * G) / (distance * distance);
+}
+```
+You can now reuse or replace the internal formula without touching the calling code.
+
 ## 10. Method Design Guidelines
 | Goal | Guideline |
 |------|-----------|
@@ -175,6 +206,7 @@ public static int bigger(int a, int b) {
 | Reuse | Prefer returning values over printing inside, unless printing is the purpose |
 | Parameter Order | From most general to most specific, or natural reading order |
 | Avoid Magic Numbers | Use parameters or constants |
+| Abstraction | Hide details; the caller should not care *how* result is produced |
 
 ## 11. Common Mistakes
 | Mistake | Example | Fix |
@@ -287,7 +319,56 @@ Super short, obvious helpers with self‑explanatory names sometimes only need c
 ### 13.8 AP CSA Relevance
 Formal Javadoc generation isn't required on the exam, but clearly communicating a method's purpose improves scoring on free-response and helps you avoid logic errors.
 
-## 14. Practice (Write or Predict)
+## 14. Method Signature
+The *method signature* in Java consists of the method name + the ordered list of parameter types. It does **not** include the return type or the parameter variable names. (Access modifiers like `public` and keywords like `static` are outside the signature for overload matching.)
+
+Example:
+```java
+public static int max(int a, int b) { ... }
+public static double max(double x, double y) { ... }
+```
+Signatures here are:
+- `max(int, int)`
+- `max(double, double)`
+
+Return types differ? That alone is NOT enough to create a different signature. You cannot have:
+```java
+public static int foo(int x) { return x; }
+public static double foo(int x) { return x; } // ERROR – same signature
+```
+
+Why care now? Recognizing signatures helps you understand how the same method name can adapt to different argument types (overloading).
+
+## 15. Method Overloading (Preview)
+**Method overloading** is defining multiple methods with the same name but different parameter lists (different number or types or order of types). Java chooses the most specific match based on the arguments you pass.
+
+You already used overloaded methods without realizing it: `System.out.println` works for `int`, `double`, `String`, etc.
+
+Examples:
+```java
+public static int add(int a, int b) { return a + b; }
+public static double add(double a, double b) { return a + b; }
+public static int add(int a, int b, int c) { return a + b + c; }
+```
+Each has a unique signature:
+- `add(int, int)`
+- `add(double, double)`
+- `add(int, int, int)`
+
+Java decides which one to call at compile time:
+```java
+System.out.println(add(3, 4));      // uses int,int version
+System.out.println(add(3.0, 4.5));  // uses double,double version
+System.out.println(add(1,2,3));     // uses int,int,int version
+```
+Why overloading? Clarity + grouping related operations under one conceptual name. Keep it simple—avoid confusing overloads that differ only subtly.
+
+Rules snapshot:
+- Parameter count OR at least one parameter type must differ
+- Return type alone cannot distinguish
+- Varargs (later) also count as different parameter lists
+
+## 16. Practice (Write or Predict)
 1. Write a method `square(int n)` returning `n * n`.
 2. Write a method `sumRange(int a, int b)` that returns the sum of the two numbers (just `a + b` for now—loops come later). Call it with 5 and 11.
 3. Write a method `greeting(String name)` that prints `Hello, <name>!` (void method). Call it twice with two different names.
@@ -307,4 +388,5 @@ System.out.println(mystery(10, -2));
 8. Write a method `average2(int a, int b)` returning a `double` average. Why should you cast?
 9. Write a method `abs(int n)` returning the absolute value (preview: use `if` or `Math.abs`).
 10. Challenge: `percent(int part, int whole)` returns a double percentage (0–100). Use: `(part * 100.0) / whole`.
+ 11. Overloading practice: Write two `printLine` methods—one taking an `int count` and printing that many dashes, another taking a `String s` and printing it surrounded by dashes (e.g., `--Hello--`). Explain their signatures.
 
