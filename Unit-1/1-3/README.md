@@ -75,6 +75,7 @@ You can cast between types to control results:
 int a = 5;
 int b = 2;
 double result = (double) a / b; // result is 2.5
+double result2 = (double) (a / b); // result2 is 2.0
 ```
 
 ## Common Mistakes

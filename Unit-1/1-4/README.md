@@ -197,7 +197,7 @@ public class DescribeScore {
 - Keep related reads together; compute after reading all required values.
 - Avoid magic numbers: if a constant matters elsewhere, use `final`.
 
-## 14. Practice Exercises
+## 14. Practice
 Try these without immediately running—predict results first.
 
 1. Write a program that asks for two integers and prints their product and difference.

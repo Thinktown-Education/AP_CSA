@@ -120,11 +120,11 @@ You can safely ignore these until a project or later unit needs them.
 1. Write a single expression for the larger magnitude value between `x` and `y` (i.e., whichever has greater absolute value) returning the original signed value.
 2. Generate a random integer in the inclusive range 5–12.
 3. Refactor: replace manual max logic:
-```java
-int bigger;
-if (a > b) bigger = a; else bigger = b;
-```
-with one line using `Math`.
+    ```java
+    int bigger;
+    if (a > b) bigger = a; else bigger = b;
+    ```
+    with one line using `Math`.
 4. Method `int clampToHundred(int n)` returning 0 if negative, 100 if over 100, otherwise `n` (use `Math.min` and `Math.max`).
 5. Give an expression for distance between two points on a number line: `a` and `b`.
 6. Generate a random even integer from 0 to 20 inclusive.
@@ -133,12 +133,12 @@ with one line using `Math`.
 9. Method `boolean isPerfectSquare(int n)` using `Math.sqrt` (floor check).
 10. Method `double hyp(int a, int b)` returning hypotenuse using no `Math.pow`.
 11. Expand: Show two equivalent ways to compute integer cube of `n` (one with `pow`, one without) and explain which is preferable.
-12. MC Style: Which yields a random integer 20–30 inclusive?
-A. `(int)(Math.random() * 11) + 20`  
-B. `(int)(Math.random() * 10) + 20`  
-C. `(int)(Math.random() * 12) + 19`  
-D. `(int)Math.random() * 11 + 20`  
-E. `(int)(Math.random()) * 11 + 20`
+12. MC Style: Which yields a random integer 20–30 inclusive?\
+    A. `(int)(Math.random() * 11) + 20`  
+    B. `(int)(Math.random() * 10) + 20`  
+    C. `(int)(Math.random() * 12) + 19`  
+    D. `(int)Math.random() * 11 + 20`  
+    E. `(int)(Math.random()) * 11 + 20`
 13. MC Style: What prints?
 ```java
 System.out.println(Math.max(Math.min(8, 5), Math.abs(-4))); // ?

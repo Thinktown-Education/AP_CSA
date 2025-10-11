@@ -187,130 +187,8 @@ double b = (double) a; // 5.0
 double c = 3.7;
 int d = (int) c; // 3 (fraction truncated)
 int xCast = 7;
-double yCast = xCast; // implicit widening
+double yCast = xCast; // implicit casting
 ```
-
-## 13. Default Values (Class vs Local)
-Local (inside a method) variables MUST be initialized before use. Instance (field) defaults:
-| Type | Default |
-|------|---------|
-| int / double | 0 or 0.0 |
-| boolean | false |
-| Reference (e.g., String) | null |
-Example:
-```java
-class Example {
-        int a;       // 0
-        boolean b;   // false
-        String s;    // null
-        void method() {
-                int x;   // must assign before use
-        }
-}
-```
-
-## 14. Scope and Lifetime
-- Local: declared inside method/block — exist only during execution of that block.
-- Instance (field): one copy per object.
-- Static: one shared copy per class.
-```java
-public class Student {
-        int age;          // instance variable
-        static int count; // class variable
-        public void setAge(int a) {
-                int year = 2025; // local
-                age = a;
-        }
-}
-```
-
-## 15. String Concatenation
-Use `+` to combine strings and values.
-```java
-String name = "Alice";
-int score = 95;
-System.out.println(name + " scored " + score + " points.");
-```
-
-## 16. Constants (`final`)
-`final` makes a variable unchangeable after it’s assigned.
-```java
-final double PI = 3.14;
-final int MAX_SCORE = 100;
-// PI = 4.2; // ERROR
-```
-
-## 17. Common Errors
-- Using an uninitialized local variable
-    ```java
-    int x;
-    System.out.println(x); // Error
-    ```
-- Incompatible assignment
-    ```java
-    int aWrong = "hello"; // Error
-    ```
-- Reassigning a final
-    ```java
-    final int MAX = 100;
-    // MAX = 90; // Error
-    ```
-
-## 18. Practical Use of Constants
-Useful for fixed values used in multiple expressions:
-```java
-final double TAX_RATE = 0.08;
-final double TIP_RATE = 0.15;
-```
-
-## 19. Refactoring the Receipt Example with Variables
-```java
-int subtotal = 38 + 40 + 30;
-double tax = subtotal * 0.08;
-double tip = subtotal * 0.15;
-double total = subtotal + tax + tip;
-
-System.out.println("Subtotal: " + subtotal);
-System.out.println("Tax: " + tax);
-System.out.println("Tip: " + tip);
-System.out.println("Total: " + total);
-```
-
-## 20. Practice
-1. Declare an `int` named `count` and assign it the value 10.
-2. Create a `double` named `average` initialized to the sum of 4.5 and 3.5 divided by 2.
-3. Write a boolean expression that stores whether `count` is greater than 5.
-4. Create a constant for maximum students (`MAX_STUDENTS = 32`).
-5. Explain why `int x = 2.9;` is invalid and how to fix it.
-6. Given `double z = 7;` what is its stored value? Why?
-7. Convert a `double price = 19.99;` to an `int` named `wholePrice`.
-8. Given `int a = 17; int b = 5;` what are the values of `a / b` and `a % b`?
-9. Suppose `int slices = 23; int people = 4;`. Write two assignments so each person gets the same whole number of slices:
-```java
-int perPerson = // fill in
-int leftover = // fill in
-```
-10. Store the last digit of a positive `int n` into `int lastDigit`.
-11. What does this print?
-```java
-int x = 8;
-int y = 3;
-System.out.println(x / y);
-System.out.println(x % y);
-```
-12.  Given `int totalSeconds = 125;` declare two variables: `int minutes` (whole minutes) and `int seconds` (remaining seconds) using `/` and `%`.
-13.  Predict the values stored:
-```java
-int n = 504;
-int ones = n % 10;        // ?
-int tens = (n / 10) % 10; // ?
-int hundreds = n / 100;   // ?
-```
-14.  Write a boolean expression that is true exactly when `num` is an even integer (use `%`).
-
-
-## 21. Keywords (Reserved Words)
-Cannot be used as variable names: `public`, `static`, `void`, `class`, `int`, `double`, `boolean`, `new`, `super`, `if`, `while`, `for`, and others.
 
 ---
 By mastering these foundational concepts you build a solid base for later topics like control flow, methods, and object-oriented design.
@@ -334,7 +212,62 @@ double x = 3;
 System.out.println(x); // 3.0
 ```
 
-## Practice
+## 13. Scope and Lifetime
+- Local: declared inside method/block — exist only during execution of that block.
+- Instance (field): one copy per object.
+- Static: one shared copy per class.
+```java
+public class Student {
+        int age;          // instance variable
+        static int count; // class variable
+        public void setAge(int a) {
+                int year = 2025; // local
+                age = a;
+        }
+}
+```
+
+## 14. String Concatenation
+Use `+` to combine strings and values.
+```java
+String name = "Alice";
+int score = 95;
+System.out.println(name + " scored " + score + " points.");
+```
+
+## 15. Constants (`final`)
+`final` makes a variable unchangeable after it’s assigned.
+```java
+final double PI = 3.14;
+final int MAX_SCORE = 100;
+// PI = 4.2; // ERROR
+```
+
+## 16. Common Errors
+- Using an uninitialized local variable
+    ```java
+    int x;
+    System.out.println(x); // Error
+    ```
+- Incompatible assignment
+    ```java
+    int aWrong = "hello"; // Error
+    int bWrong = 3.0; // Error
+    ```
+- Reassigning a final
+    ```java
+    final int MAX = 100;
+    // MAX = 90; // Error
+    ```
+
+## 17. Practical Use of Constants
+Useful for fixed values used in multiple expressions:
+```java
+final double TAX_RATE = 0.08;
+final double TIP_RATE = 0.15;
+```
+
+## 18. Refactoring the Receipt Example with Variables
 Now back to the receipt question, how can we optimize the code with variables?
 ```java
 System.out.println("Subtotal:");
@@ -349,7 +282,6 @@ System.out.println(38 + 40 + 30 +
                   (38 + 40 + 30) * .15);
 ```
 
-#### Answer
 ```java
 int subtotal = 38 + 40 + 30;
 double tax = subtotal * 0.08;
@@ -361,3 +293,15 @@ System.out.println("Tax: " + tax);
 System.out.println("Tip: " + tip);
 System.out.println("Total: " + total);
 ```
+
+## 19. Keywords (Reserved Words)
+Cannot be used as variable names: `public`, `static`, `void`, `class`, `int`, `double`, `boolean`, `new`, `super`, `if`, `while`, `for`, and others.
+
+## 20. Practice
+1. Declare an `int` named `count` and assign it the value 10.
+2. Create a `double` named `average` initialized to the sum of 4.5 and 3.5 divided by 2.
+3. Write a boolean expression that stores whether `count` is greater than 5.
+4. Create a constant for maximum students (`MAX_STUDENTS = 32`).
+5. Explain why `int x = 2.9;` is invalid and how to fix it.
+6. Given `double z = 7;` what is its stored value? Why?
+7. Convert a `double price = 19.99;` to an `int` named `wholePrice`.
