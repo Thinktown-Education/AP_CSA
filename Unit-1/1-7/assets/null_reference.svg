@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="150" viewBox="0 0 520 150">
+  <title>Null Reference</title>
+  <desc>Variable box with value null and no arrow to illustrate null reference.</desc>
+  <rect x="40" y="50" width="160" height="60" rx="6" fill="#ffeef0" stroke="#c84a5a"/>
+  <text x="120" y="80" font-size="14" text-anchor="middle" font-family="Arial" fill="#9a2d3a">studentVar = null</text>
+  <text x="300" y="75" font-size="13" font-family="Arial" fill="#444">(no object)</text>
+</svg>

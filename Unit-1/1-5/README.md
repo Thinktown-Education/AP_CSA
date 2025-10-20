@@ -30,7 +30,7 @@ Much cleaner!
 
 ## 2. Defining a Method (Void Version)
 Structure (we'll keep `public static` for now; meaning will be revisited later):
-```
+```java
 public static void methodName(parameterList) {
     // statements
 }
@@ -74,7 +74,7 @@ Call 2: `a=10`, `b=-2`, prints `Sum=8`.
 ## 5. Return Methods (Producing a Value)
 Sometimes we want to compute a value and use it later instead of printing immediately.
 Structure:
-```
+```java
 public static returnType methodName(parameters) {
     // compute something
     return value; // value must match returnType
@@ -212,7 +212,7 @@ You can now reuse or replace the internal formula without touching the calling c
 | Mistake | Example | Fix |
 |---------|---------|-----|
 | Missing return in non-void | `public static int foo(){ int x=5; }` | Add `return x;` |
-| Wrong return type | `public static int area(double r){ return 2 * Math.PI * r; }` (circumference) | Make method name reflect result OR change return calculation |
+| Wrong return type | `public static int area(double r){ return 2 * Math.PI * r; }`  | Make method name reflect result OR change return calculation |
 | Printing instead of returning | `void average(){ System.out.println(sum/3); }` | Change to `double average(..)` and return value |
 | Using undeclared variable | `return result;` without defining `result` | Declare & assign first |
 | Parameter shadow confusion | Reusing names—keep it simple | Distinct, meaningful names |

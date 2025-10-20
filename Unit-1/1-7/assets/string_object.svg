@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="150" viewBox="0 0 520 150">
+  <title>String Object Reference</title>
+  <desc>Variable pointing to a String object in memory showing immutability concept.</desc>
+  <rect x="30" y="50" width="140" height="50" rx="6" fill="#fff7e6" stroke="#c28a00"/>
+  <text x="100" y="78" font-size="14" text-anchor="middle" font-family="Arial" fill="#7a5600">title</text>
+  <line x1="170" y1="75" x2="300" y2="75" stroke="#555" marker-end="url(#arrow)"/>
+  <rect x="300" y="35" width="180" height="80" rx="8" fill="#eef6ff" stroke="#2f5e91"/>
+  <text x="390" y="60" font-size="14" text-anchor="middle" font-family="Arial" fill="#2f5e91">String Object</text>
+  <text x="310" y="85" font-size="12" font-family="Arial" fill="#123">value: "AP CSA"</text>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" fill="#555">
+      <path d="M0,0 L6,3 L0,6 Z" />
+    </marker>
+  </defs>
+</svg>
