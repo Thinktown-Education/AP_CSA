@@ -95,6 +95,26 @@ Notes:
 - Java automatically converts non-String operands to `String` when using `+` with a `String` (e.g., `"Score: " + 10` → `"Score: 10"`).
 - Operator associativity matters when concatenating numbers and strings: `"a" + 1 + 2` → `"a12"`, whereas `1 + 2 + "a"` → `"3a"`.
 
+### Escape characters
+
+When building strings you may need to include special characters such as double quotes, backslashes, or newlines. Use escape sequences inside string literals.
+
+Examples:
+
+```java
+String quote = "She said, \"Hello\""; // contains double quotes
+String path = "C:\\Users\\henry";    // backslashes must be escaped
+String lines = "First line\nSecond line"; // newline escape
+System.out.println(quote);
+System.out.println(path);
+System.out.println(lines);
+```
+
+Notes:
+- Use `\"` to include a double-quote character inside a string literal.
+- Use `\\` to include a literal backslash.
+- Use `\n` for a newline; when concatenating, the escape behaves like any other character in the literal.
+
 ### Common mistakes & tips
 
 - **Mixing concatenation and addition**: Without parentheses, Java evaluates left-to-right. `"Sum: " + 1 + 2` gives `"Sum: 12"`, whereas `"Sum: " + (1 + 2)` gives `"Sum: 3"`.
