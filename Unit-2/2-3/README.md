@@ -1,12 +1,15 @@
 # Unit 2.3 — Compound Boolean
 
-This chapter explains how to combine boolean expressions in Java using the logical operators `&&` (AND), `||` (OR), and `!` (NOT). The chapter is organized to build intuition, show precise rules (including operator precedence and truth tables), demonstrate safe coding patterns (short-circuiting), and provide practice problems with answers.
+## Learning Goals
+By the end of this unit, you will:
+- Combine boolean expressions using `&&` (AND), `||` (OR), and `!` (NOT)
+- Understand operator precedence and short-circuit evaluation
+- Apply De Morgan's Laws to simplify negated conditions
+- Write safe conditions that avoid errors (e.g., NullPointerException)
+- Evaluate complex boolean expressions correctly
+- Use compound booleans in conditional statements
 
-## Goals
-
-## Prerequisites
-
-## 1. Introduction — Detailed operator guide
+## 1. Introduction — Detailed Operator Guide
 
 This section explains each compound boolean operator in detail: its semantics, truth table, short-circuit behavior, common uses, and small examples. Understanding these thoroughly helps you write safe, readable conditions.
 
@@ -414,8 +417,16 @@ if (ok || expensiveCheck()) {
 }
 // expensiveCheck() is not called because ok is false? (actually it is called only if ok is false; if ok is true it will NOT be called)
 ```
+## Key Takeaways
+- Use `&&` for "both must be true", `||` for "at least one is true", and `!` to invert
+- Operator precedence: `!` > `&&` > `||`; use parentheses for clarity
+- Short-circuit evaluation avoids unnecessary computation and prevents errors
+- Always check for `null` before calling methods: `if (s != null && s.equals("yes"))`
+- De Morgan's Laws help simplify and transform negated conditions
+- Avoid side effects in right-hand operands of `&&` and `||` since they may not execute
+- Complex boolean expressions are easier to read when properly parenthesized
 
-## 8. Practice problems
+## Practice problems
 
 1) Evaluate the following and state what prints (if anything):
 
@@ -449,68 +460,3 @@ p || q && !r
 ```
 
 5) Write a condition that checks whether an integer `n` is outside the range 1..100 inclusive (i.e., `n < 1` or `n > 100`). Then write an equivalent condition using `!` (NOT) applied to the inside-of-range test.
-
-## 9. Practice answers
-
-1) Output:
-
-A
-
-Explanation: `x > 0 && x < 10` is true so `A` prints. `x < 0 || x % 2 == 0` is false (x is positive and odd) so `B` does not print.
-
-2) Output:
-
-Blocked or unsafe
-
-Explanation: `a != 0` is false, so in `a != 0 && (10 / a) > 1` Java short-circuits and does NOT evaluate `(10 / a)` — that prevents a division-by-zero exception. Because the `if` condition is false, the `else` runs.
-
-3) Example solution:
-
-```java
-if (s != null && s.equals("yes")) {
-	System.out.println("ok");
-}
-```
-
-Explanation: If `s` is `null`, the left side `s != null` is false and `s.equals("yes")` is not evaluated, avoiding a NullPointerException.
-
-4) Add parentheses and evaluate:
-
-```
-p || (q && (!r))
-
-With p=true, q=false, r=true:
-q && (!r) => false && (!true) => false && false => false
-p || (false) => true || false => true
-
-So the expression is true.
-```
-
-5) Using `||`:
-
-```
-if (n < 1 || n > 100) {
-	// outside range
-}
-```
-
-Using `!` applied to inside-of-range:
-
-```
-if (!(n >= 1 && n <= 100)) {
-	// outside range
-}
-```
-
-## 10. Quick checklist for compound booleans
-- Remember operator precedence: `!` then `&&` then `||`.
-- Use parentheses to clarify complex conditions.
-- Prefer short-circuit-safe ordering when expressions may cause errors.
-- Avoid heavy side effects inside boolean expressions.
-
----
-
-If you want, I can:
-- Convert this chapter to a printable handout.
-- Add SVG diagrams illustrating short-circuit flow to `Unit-2/2-3/images/` and insert them.
-- Generate runnable `.java` example files and a test harness.

@@ -1,5 +1,12 @@
 # Unit 1.2 Variables and Data Types
 
+## Learning Goals
+By the end of this unit, you will:
+- Understand primitive and reference data types
+- Declare and initialize variables with proper syntax
+- Understand variable scope and naming conventions
+- Use variables effectively in expressions and assignments
+
 ## 1. What Is a Data Type?
 **Data type**: a set of possible values and the operations allowed on them. Java data types are either **primitive** or **reference**.
 
@@ -294,13 +301,24 @@ System.out.println("Tip: " + tip);
 System.out.println("Total: " + total);
 ```
 
-## 19. Keywords (Reserved Words)
-Cannot be used as variable names: `public`, `static`, `void`, `class`, `int`, `double`, `boolean`, `new`, `super`, `if`, `while`, `for`, and others.
+## Reserved keywords
+Certain words are reserved by Java and cannot be used as variable names:
+- public
+- class
+- static
+- void
+- int
+- double
+- boolean
 
-## 20. Practice
-1. Declare an `int` named `count` and assign it the value 10.
-2. Create a `double` named `average` initialized to the sum of 4.5 and 3.5 divided by 2.
-3. Write a boolean expression that stores whether `count` is greater than 5.
+## Key Takeaways
+- Primitive types (`int`, `double`, `boolean`) store raw values; reference types store object addresses
+- Always declare variables before use with proper type
+- Use meaningful variable names in camelCase
+- Initialization combines declaration and assignment for convenience
+- Type casting converts between compatible types (widening is safe; narrowing requires explicit cast)
+
+## Practice Problems
 4. Create a constant for maximum students (`MAX_STUDENTS = 32`).
 5. Explain why `int x = 2.9;` is invalid and how to fix it.
 6. Given `double z = 7;` what is its stored value? Why?

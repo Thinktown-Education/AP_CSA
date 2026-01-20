@@ -1,11 +1,20 @@
 # Unit 1.8 Strings
-This chapter covers Strings in Java for AP Computer Science A (AP CSA). It explains what a String is, how to create and reference Strings, concatenation, indexing and length, common String methods, and common mistakes students make.
+
+## Learning Goals
+By the end of this unit, you will:
+- Understand what a `String` is and how to create string objects
+- Use string indexing and the `length()` method
+- Extract substrings using `substring()`
+- Call common `String` methods (`indexOf()`, `equals()`, etc.)
+- Concatenate strings safely
+- Use escape sequences for special characters
+- Avoid common string mistakes
 
 **Learning goals:**
 - Understand what a `String` represents in Java.
 - Create and reference `String` objects and literals.
 - Concatenate strings safely and predictably.
-- Use indexing and `length()` to access characters.
+- Use indexing and `length()` to access substrings.
 - Use common `String` methods from the Java standard library.
 - Avoid common mistakes when working with strings.
 
@@ -144,7 +153,7 @@ String sub1 = s.substring(1);    // "ava"
 String sub2 = s.substring(0, 2); // "Ja"
 ```
 
-Remember that valid indices are `0` to `length() - 1`. Attempting to access `charAt` with an out-of-range index throws `StringIndexOutOfBoundsException`.
+Remember that valid indices are `0` to `length() - 1`. Attempting to access out-of-range indices with `substring()` throws `StringIndexOutOfBoundsException`.
 
 You can get substrings with `substring(beginIndex)` or `substring(beginIndex, endIndex)` (end index is exclusive):
 
@@ -160,7 +169,7 @@ String sub2 = s.substring(0, 3);    // "Com"   (index 0,1,2)
 
 - **Swapped or invalid indices**: Calling `substring(5, 2)` will throw `StringIndexOutOfBoundsException`. Ensure `beginIndex <= endIndex` and both are within range.
 
-- **`charAt` index bounds**: `charAt(len)` is invalid because last valid index is `len - 1`.
+- **Substring bounds**: `substring(len, len+1)` is invalid because valid indices are `0` to `len - 1`.
 
 ### Practice problem (index & length)
 
@@ -170,7 +179,7 @@ Given:
 String s = "ABCDE";
 int a = s.length();
 System.out.println(s.substring(1, 4));
-System.out.println(s.charAt(a - 1));
+System.out.println(s.substring(a - 1));
 ```
 
 

@@ -1,8 +1,17 @@
 # Unit 1.7 Objects
 
-Objects are the core idea of object-oriented programming (OOP). In AP CSA, you must understand how to create, use, and reason about objects early. This unit introduces objects conceptually before deep class design.
+## Learning Goals
+By the end of this unit, you will:
+- Distinguish a class (blueprint) from an object (instance)
+- Create objects using `new` and constructor syntax
+- Call methods on objects using dot notation
+- Understand reference variables and memory references
+- Recognize aliasing and how it affects program behavior
+- Understand `null` and avoid `NullPointerException`
+- Use the `String` class and `equals()` method correctly
 
 ## 1. Learning Goals
+
 By the end you can:
 - Distinguish a class vs an object instance
 - Create objects with `new` and call their methods
@@ -12,6 +21,7 @@ By the end you can:
 - Recognize `null` and avoid `NullPointerException`
 
 ## 2. Real-World Analogy
+
 Look around: a phone, a book, a car. Each is an object with properties (state) and abilities (behavior).
 ![real world objects](./assets/real_world_objects.svg)
 
@@ -207,12 +217,16 @@ What is `p.getGrade()`? (A) 8 (B) 9 (C) undefined (D) error
 19. Describe a scenario where checking for `null` prevents a crash.
 20. If a method should not modify an object passed in, what practice helps enforce that?
 
-## 14. Summary
-- Class = blueprint; object = instance
-- References store addresses
-- `new` invokes constructor and returns a reference
-- Strings are immutable; use `equals`
-- Aliasing means multiple references to one object
+## Key Takeaways
+- Objects are instances of classes; classes are blueprints
+- Reference variables hold addresses pointing to objects in memory
+- Use `new` to create object instances
+- Call methods with dot notation: `object.methodName(arguments)`
+- Aliasing (two references to same object) means changes affect both
+- Use `equals()` for `String` content comparison, not `==`
+- Check for `null` before calling methods to avoid `NullPointerException`
+- Understand pass-by-value: arguments pass copies of references, not reassignments
+- Strings are immutable; methods return new `String` objects
 - `null` means no object; check before use
 - Pass-by-value copies the reference, not the object
 - Clear naming and focused methods improve readability

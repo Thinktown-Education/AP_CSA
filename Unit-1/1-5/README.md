@@ -1,16 +1,15 @@
 # Unit 1.5 Methods (Basics)
 
-Methods let us break a big task into smaller reusable pieces. You have already SEEN one method every time you wrote a program:
-```java
-public static void main(String[] args) { }
-```
-In this unit we learn how to WRITE and CALL our own methods (still staying outside of full OOP design). Think of a method as a mini‑program with:
-1. A name
-2. (Optional) inputs (called parameters)
-3. (Optional) a returned output (using `return`)
-4. A body (the statements it performs)
+## Learning Goals
+By the end of this unit, you will:
+- Understand how methods break down large tasks into reusable pieces
+- Distinguish between void methods and return methods
+- Define methods with parameters
+- Call methods correctly with appropriate arguments
+- Use methods to improve code readability and maintainability
+- Understand procedural abstraction
 
-## 1. Motivation: Repetition & Clarity
+## Motivation: Repetition & Clarity
 Suppose we want to print the perimeter and area of several rectangles:
 ```java
 int w1 = 5, h1 = 2;
@@ -208,7 +207,16 @@ You can now reuse or replace the internal formula without touching the calling c
 | Avoid Magic Numbers | Use parameters or constants |
 | Abstraction | Hide details; the caller should not care *how* result is produced |
 
-## 11. Common Mistakes
+## Key Takeaways
+- Methods reduce repetition and improve readability
+- Void methods perform actions; return methods compute values
+- Parameters allow methods to work with different data
+- Separation of calculation from display makes code more reusable
+- Procedural abstraction lets you use methods without knowing implementation details
+- Always return values when results might be reused
+- Use descriptive names and keep methods focused on a single task
+
+## Practice
 | Mistake | Example | Fix |
 |---------|---------|-----|
 | Missing return in non-void | `public static int foo(){ int x=5; }` | Add `return x;` |

@@ -1,9 +1,15 @@
 # Unit 1.4 Input
 
-Starting in 2025, the AP Computer Science A curriculum explicitly emphasizes reading user input. In Java, interactive console input is almost always done with the `Scanner` class. This section gives you everything you need to correctly and safely read input for AP CSA problems.
+## Learning Goals
+By the end of this unit, you will:
+- Understand how to read user input using the `Scanner` class
+- Import classes correctly
+- Use `Scanner` methods appropriately (`nextInt()`, `nextDouble()`, `next()`, `nextLine()`)
+- Handle the newline character gotcha when mixing numeric and line input
+- Write interactive programs that respond to user data
 
 ## 1. Why Input Matters
-Up to now, your programs may have only printed output. Input lets the program respond to user-provided data instead of hard‑coding values. Many FRQ style problems simulate processing values that could (in a real setting) come from input.
+Up to now, your programs may have only printed output. Input lets the program respond to user-provided data instead of hard-coding values. Many FRQ style problems simulate processing values that could (in a real setting) come from input.
 
 ## 2. The `Scanner` Class Overview
 `Scanner` is a utility class in `java.util` used to parse text into tokens (pieces) separated by whitespace (spaces, tabs, newlines) or custom delimiters.

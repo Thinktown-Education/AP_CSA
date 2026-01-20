@@ -1,6 +1,12 @@
 # Unit 1.3 Arithmetic Operations
 
-Arithmetic operations are used to perform mathematical calculations in Java. Understanding these operations is essential for manipulating data and solving problems in AP CSA.
+## Learning Goals
+By the end of this unit, you will:
+- Understand and use all basic arithmetic operators
+- Apply operator precedence correctly
+- Distinguish between integer and double division
+- Use compound assignment operators effectively
+- Avoid common arithmetic mistakes
 
 ## Basic Arithmetic Operators
 Java provides several basic arithmetic operators:
@@ -83,9 +89,14 @@ double result2 = (double) (a / b); // result2 is 2.0
 - Using `%` with negative numbers (result may be negative)
 - Forgetting operator precedence
 
-## Practice Problems
+## Key Takeaways
+- Operator precedence determines evaluation order: parentheses, then `*`/`/`/`%`, then `+`/`-`
+- Integer division truncates; at least one operand must be double for decimal results
+- Compound operators (`+=`, `-=`, etc.) combine assignment with operation
+- Type casting allows intentional type conversion
+- Always be careful with division by zero and order of operations
 
-### Practice Problems: Complex Arithmetic Expressions
+## Practice Problems
 1. What is the value of `int result = 2 + 3 * 4 - 8 / 2;`?
 2. What is the value of `double value = (5 + 2.0) * 3 / 4;`?
 3. What does `int x = 10; x += 2 * 3;` set `x` to?

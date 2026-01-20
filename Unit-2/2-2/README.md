@@ -1,20 +1,15 @@
 # Unit 2.2 — If Statements
 
-This chapter covers the basic conditional statements used in Java: `if`, `else`, and `else if`.
-It focuses only on single comparisons and single `if`/`else if`/`else` chains. Nested `if` statements and
-compound boolean expressions (using `&&`, `||`, or `!`) are intentionally excluded and will be
-introduced in later chapters.
+## Learning Goals
+By the end of this unit, you will:
+- Understand the purpose of `if`, `else`, and `else if` constructs
+- Learn correct Java syntax for conditional statements
+- Read simple examples and predict their output
+- Write short programs using single-condition `if` statements
+- Use nested `if` statements to build complex decisions
+- Trace execution flow through conditional blocks
 
-**Goals**
-- Understand the purpose of `if`, `else`, and `else if`.
-- Learn correct Java syntax for each construct.
-- Read simple examples and predict their output.
-- Write short programs using single-condition `if` statements.
-
-**Prerequisites**
-- Familiarity with Java variables, types (especially `int`, `double`, `boolean`, and `String`), and basic I/O.
-
-## 1. What is a conditional statement?
+## 1. What is a Conditional Statement?
 
 A conditional statement lets the program make a decision: run some code only when a condition is true.
 In Java the condition inside an `if` must evaluate to a `boolean` value (`true` or `false`).
@@ -281,7 +276,16 @@ if (a > 5) {
 }
 ```
 
-## 8. Practice problems
+## Key Takeaways
+- `if` executes a block when condition is true; `else` provides an alternative
+- `else if` checks additional conditions when prior conditions are false
+- Only one branch in an `if`/`else if`/`else` chain executes
+- Braces `{}` group statements; omitting them controls only the next single statement
+- Nested `if` statements check conditions only when outer condition is true
+- Use `==` for primitive comparison, not `=` (which is assignment)
+- Proper bracing and indentation prevent logic errors and make code readable
+  
+## Practice problems
 
 1) What does the following program print?
 
@@ -320,64 +324,4 @@ if (a == 5) {
 }
 ```
 
----
-
-
-## 9. Practice answers
-
-### Nested practice answers
-
-1) Output: `Positive even` (since 4 > 0 and 4 % 2 == 0).
-
-2) Example solution:
-
-```java
-if (n >= 1) {
-    if (n <= 100) {
-        System.out.println("valid");
-    } else {
-        System.out.println("out of range");
-    }
-} else {
-    System.out.println("out of range");
-}
-```
-
-3) Output:
-
-big
-not bigger
-
-Explanation: `a > 5` is true so `big` prints. `a > 10` is false so the inner `else` prints `not bigger`.
-
-### General practice answers
-
-1) Output: `A`
-
-Explanation: `x > 5` is true, so the first `if` runs. The `else if` is not evaluated once a true branch has executed.
-
-2) Example solution:
-
-```java
-if (n < 10) {
-    System.out.println("small");
-} else if (n < 20) {
-    System.out.println("medium");
-} else {
-    System.out.println("large");
-}
-```
-
-3) Output: `Minor` — `age >= 18` is false.
-
-4) Output: `one`
-
-Explanation: The first `if (a == 5)` is true and its branch runs; the `else if` is not reached because the chain already matched.
-
-## 10. Quick checklist for writing `if` statements
-
-- Use parentheses after `if` and `else if`.
-- Use `==` for primitive equality comparison.
-- Choose `else if` when branches are mutually exclusive and only one should run.
-- Keep conditions simple for now — no logical operators or nesting.
 

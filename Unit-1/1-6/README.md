@@ -1,6 +1,13 @@
 # Unit 1.6 The `Math` Class
 
-This unit focuses specifically on Java's built‑in `Math` class: what it provides, how to call its methods, patterns for random numbers, and common pitfalls. Basic arithmetic, casting, and operators were introduced earlier; here we center only on the library.
+## Learning Goals
+By the end of this unit, you will:
+- Use `Math` constants (`PI`, `E`) and static methods
+- Apply common `Math` methods: `abs()`, `max()`, `min()`, `sqrt()`, `pow()`, `random()`
+- Generate random integers in specified ranges
+- Understand method overloading
+- Compose nested `Math` method calls
+- Avoid common `Math` pitfalls
 
 ## 1. Why a `Math` Class?
 Instead of rewriting common operations (max, square root, powers), Java provides a collection of ready‑to‑use static methods and constants. Using them:
