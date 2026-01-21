@@ -1,4 +1,4 @@
-# Unit 3 Class Definitions and Interactions
+# Unit 3 Class Creation
 
 - [Unit 3-1 Abstraction and Program Design](./3-1/)
 - [Unit 3-2 Impact of Program Design](./3-2/)
