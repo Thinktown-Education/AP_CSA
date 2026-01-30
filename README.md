@@ -4,7 +4,6 @@
 
 <h1 align="center">AP CSA Textbook</h1>
 
-Work in progress...
 - [Unit 0 Hello World](./Unit-0/)
 - [Unit 1 Objects and Methods](./Unit-1/)
 - [Unit 2 Selection and Iteration](./Unit-2/)
